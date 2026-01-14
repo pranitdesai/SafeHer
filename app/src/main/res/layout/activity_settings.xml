@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    tools:context=".Settings"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/background_pink"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/dotMenu"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_menu"
+            android:padding="10dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="Settings"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginHorizontal="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/dotMenu"
+            />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/safeherlogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/Accounttext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/poppins"
+            android:text="Account Settings"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/ButtonAccount"
+            app:rippleColor="@color/medium_pink"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginHorizontal="24dp"
+            android:drawableLeft="@drawable/person_icon"
+            android:drawableTint="@color/black"
+            android:fontFamily="@font/poppins"
+            android:backgroundTint="@color/background_pink"
+            android:text="Account"
+            app:cornerRadius="12dp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Accounttext" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/ButtonDeleteAccount"
+            android:layout_width="0dp"
+            app:rippleColor="@color/medium_pink"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="12dp"
+            app:cornerRadius="12dp"
+            android:backgroundTint="@color/background_pink"
+            android:drawableLeft="@drawable/bin"
+            android:drawableTint="@color/black"
+            android:fontFamily="@font/poppins"
+            android:text="Delete Account"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ButtonAccount" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonLogout"
+            android:layout_width="0dp"
+            app:cornerRadius="12dp"
+            app:rippleColor="@color/medium_pink"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/background_pink"
+            android:drawableLeft="@drawable/logout"
+            android:fontFamily="@font/poppins"
+            android:text="Logout"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ButtonDeleteAccount" />
+
+        <TextView
+            android:id="@+id/generaltext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/poppins"
+            android:text="Genral Settings"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonLogout" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonupdate"
+            app:cornerRadius="12dp"
+            android:layout_width="0dp"
+            app:rippleColor="@color/medium_pink"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginHorizontal="24dp"
+            android:backgroundTint="@color/background_pink"
+            android:drawableLeft="@drawable/ic_update_phone"
+            android:fontFamily="@font/poppins"
+            android:text="Update Guardian Numbers"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/generaltext" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/LocationSettings"
+            android:layout_width="0dp"
+            app:cornerRadius="12dp"
+            app:rippleColor="@color/medium_pink"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/background_pink"
+            android:drawableLeft="@drawable/location_pin"
+            android:fontFamily="@font/poppins"
+            android:text="Location Settings"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonupdate" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/drawerCard"
+        android:layout_width="300dp"
+        app:strokeWidth="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:cardCornerRadius="24dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginStart="0dp">
+
+        <LinearLayout
+            android:id="@+id/drawerContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:paddingBottom="20dp">
+
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/navigationView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                app:itemIconTint="@color/black"
+                app:headerLayout="@layout/nav_header"
+                app:itemTextColor="@android:color/black"
+                app:itemTextAppearance="@style/DrawerItemText"
+                app:menu="@menu/drawer_menu"/>
+
+            <!-- ✅ LOGOUT fixed bottom -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginHorizontal="20dp"
+                android:text="Logout"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#A70014"
+                app:cornerRadius="30dp"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</androidx.drawerlayout.widget.DrawerLayout>
