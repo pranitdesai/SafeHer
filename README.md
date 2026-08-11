@@ -39,7 +39,7 @@ The app focuses on fast response, reliability, and real-world usability during e
 
 ## 🧑‍💻 Tech Stack
 
-- **Android (Java + XML) / Flutter (as per module)**
+- **Android (Java + XML)**
 - **Firebase Authentication**
 - **Firebase Realtime Database**
 - **Firebase Cloud Messaging (FCM)**
